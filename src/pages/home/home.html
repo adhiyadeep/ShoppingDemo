@@ -1,14 +1,57 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
+  <ion-navbar color="black">
+
+    <button ion-button icon-only left class="toolbarbackarrow">
+      <ion-icon name="ios-arrow-back" style="color: white;"></ion-icon>
+    </button>
+
+    <button ion-button icon-only right class="toolbaricon">
+      <ion-icon name="search" style="color:white;  zoom: 1;  margin-left: -35px; margin-right: 20px"></ion-icon>
+    </button>
+
+    <button ion-button icon-only right class="toolbaricon">
+      <ion-icon name="cart" style="color:white ;"></ion-icon>
+    </button>
+
+    <ion-title style="text-align: center">
+      Women
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content no-bounce>
+
+  <ion-item style="padding: 10px!important">
+
+    <ion-slides autoplay="3000" pager="true" loop="true" speed="300">
+      <ion-slide *ngFor="let slide of slideData">
+        <img src="{{slide.image}}" />
+      </ion-slide>
+
+    </ion-slides>
+
+  </ion-item>
+
+  <ion-item>
+    <ion-label style="text-align: center; text-size : 12px!important">POPULAR </ion-label>
+  </ion-item>
+ 
+
+      <ion-card class="myCard">
+          <ion-grid>  
+        <ion-row >
+              <ion-col col-6   *ngFor="let product of shoppingData">
+                <ion-item > 
+                    <img  src="{{product.image}}">
+                </ion-item> 
+                  <div  class="myOverlay">
+                      <ion-label class="card-title"> {{product.title}}</ion-label>
+                    </div>
+                </ion-col>
+                 
+              </ion-row>
+           </ion-grid>
+        </ion-card>
+    
+  
 </ion-content>

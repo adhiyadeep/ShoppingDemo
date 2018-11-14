@@ -1,0 +1,23 @@
+page-filterpage {
+
+    
+    ion-navbar.toolbar {
+        min-height: 70px;
+      }
+      .toolbaricon{
+        position: absolute;
+        right: -1px;
+        width: 95px!important;
+        top: 12px;
+        background-color:transparent;
+    }
+
+    .toolbarbackarrow{
+        position: absolute;
+        left: 5px;
+        width: 20px!important;
+        top: 12px;
+        background-color:transparent;
+    }
+
+}

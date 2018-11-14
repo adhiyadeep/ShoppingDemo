@@ -2,15 +2,17 @@
   <ion-navbar color="black">
 
     <button ion-button icon-only left class="toolbarbackarrow">
-      <ion-icon name="ios-arrow-back" style="color: white;"></ion-icon>
+      <img style= "height: 25px!important" src="./../assets/icon/back-arrow.png" />
     </button>
 
     <button ion-button icon-only right class="toolbaricon">
-      <ion-icon name="search" style="color:white;  zoom: 1;  margin-left: -35px; margin-right: 20px"></ion-icon>
+      <img style= "height: 25px!important ; color:white;   margin-left: -40px; margin-right: 25px"
+      src="./../assets/icon/search.png" />
+      
     </button>
 
     <button ion-button icon-only right class="toolbaricon">
-      <ion-icon name="cart" style="color:white ;"></ion-icon>
+      <img style= "height: 25px!important;"src="./../assets/icon/cart.png" />
     </button>
 
     <ion-title style="text-align: center">
@@ -23,13 +25,23 @@
 
   <ion-item style="padding: 10px!important">
 
-    <ion-slides autoplay="3000" pager="true" loop="true" speed="300">
-      <ion-slide *ngFor="let slide of slideData">
-        <img src="{{slide.image}}" />
-      </ion-slide>
+    <div>
 
-    </ion-slides>
-
+      <ion-slides >
+  
+            <ion-slide *ngFor="let slide of slideData">
+                <img src="{{slide.image}}">
+                <h1 class="lab">20 Summar 2018</h1>
+              </ion-slide>      
+  
+          
+        
+      </ion-slides>
+    
+    
+  
+    </div>
+    
   </ion-item>
 
   <ion-item>
@@ -52,6 +64,6 @@
               </ion-row>
            </ion-grid>
         </ion-card>
-    
   
+
 </ion-content>
